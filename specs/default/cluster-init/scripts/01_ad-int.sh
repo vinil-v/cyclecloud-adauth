@@ -1,4 +1,8 @@
 #!/bin/sh
+#Author : Vinil Vadakkepurakkal
+#Integrating AD login for Linux Machines using SSSD.
+#OS Tested : CentOS 7 / RHEL7 / Alma Linux 8 / Ubuntu 18.04
+#Env - Azure CycleCloud
 #define variables for AD
 AD_SERVER=$(jetpack config adauth.ad_server)
 AD_SERVER_IP=$(jetpack config adauth.ad_server_ip)
