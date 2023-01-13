@@ -30,11 +30,11 @@ Autoscale = $Autoscale
         slurm.ha_enabled = $configuration_slurm_ha_enabled
         slurm.launch_parameters = $configuration_slurm_launch_parameters
 
-	#AD server info
-	adauth.ad_server=$ad_server
-	adauth.ad_server_ip=$ad_server_ip
-	adauth.ad_admin_user=$ad_admin_user
-	adauth.ad_admin_password=$ad_admin_passwd
+	    #AD server info
+	    adauth.ad_server=$ad_server
+	    adauth.ad_server_ip=$ad_server_ip
+	    adauth.ad_admin_user=$ad_admin_user
+	    adauth.ad_admin_password=$ad_admin_passwd
 
         # Disable ip-XXXXXXXX hostname generation
         cyclecloud.hosts.standalone_dns.enabled = ${NodeNameIsHostname==false}
@@ -42,6 +42,7 @@ Autoscale = $Autoscale
 
         # For fast spin-up after Deallocate, force an immediate re-converge on boot
         cyclecloud.converge_on_boot = true
+        cyclecloud.selinux.policy = permissive
 
         # Disable normal NFS exports and mounts
         cyclecloud.mounts.sched.disabled = true
@@ -320,7 +321,7 @@ Order = 10
         [[parameter ad_server]]
         Label = FQDN of Active Directory server
         Description = FQDN of AD server (eg: adserver.hpc.local).
-        DefaultValue = hpc.local
+        DefaultValue = adserver.hpc.local
         Required = True
 
         [[parameter ad_server_ip]]
