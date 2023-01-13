@@ -30,11 +30,11 @@ Autoscale = $Autoscale
         slurm.ha_enabled = $configuration_slurm_ha_enabled
         slurm.launch_parameters = $configuration_slurm_launch_parameters
 
-	    #AD server info
-	    adauth.ad_server=$ad_server
-	    adauth.ad_server_ip=$ad_server_ip
-	    adauth.ad_admin_user=$ad_admin_user
-	    adauth.ad_admin_password=$ad_admin_passwd
+	#AD server info
+	adauth.ad_server=$ad_server
+	adauth.ad_server_ip=$ad_server_ip
+	adauth.ad_admin_user=$ad_admin_user
+	adauth.ad_admin_password=$ad_admin_passwd
 
         # Disable ip-XXXXXXXX hostname generation
         cyclecloud.hosts.standalone_dns.enabled = ${NodeNameIsHostname==false}
