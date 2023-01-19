@@ -7,5 +7,7 @@ It is recommended that user access be managed through a directory service such a
 **Pre-Requisites:**
 1. [CycleCloud](https://learn.microsoft.com/en-us/azure/cyclecloud/qs-install-marketplace?view=cyclecloud-8) must be installed and running (CycleCloud 8.0 or later).
 2. [Windows Active Directory](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-) must be configured and running. 
- 
+3. Supported OS version : CentOS 7 / RHEL7 / Alma Linux 8 / Ubuntu 18.04
+
+**Configuring the Project**
 
