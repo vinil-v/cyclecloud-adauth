@@ -17,7 +17,7 @@ $ git clone https://github.com/vinil-v/cyclecloud-adauth.git
 ```
 3. Upload the project to cyclecloud locker.
 ``` bash
-$ cd cyclecloud-adauth/`
+$ cd cyclecloud-adauth/
 $ cyclecloud project upload <locker name>
 ```
 
@@ -27,5 +27,7 @@ cyclecloud import_template -f templates/slurm_with_ad.txt
 ```
 
 **Configuring AD in CycleCloud**
+
+
 ![Alt text](https://github.com/vinil-v/cyclecloud-adauth/blob/main/images/ad-screenshot.png?raw=true)
 
