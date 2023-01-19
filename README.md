@@ -11,14 +11,16 @@ It is recommended that user access be managed through a directory service such a
 
 **Configuring the Project**
 1. Open a terminal session in CycleCloud server with the CycleCloud CLI enabled.
-2. clone the cyclecloud-adauth repo
+2. Clone the cyclecloud-adauth repo
 
 `git clone https://github.com/vinil-v/cyclecloud-adauth.git`
 
 3. Upload the project to cyclecloud locker.
 
 `cd cyclecloud-adauth/`
+
 `cyclecloud project upload <locker name>`
+
 4. Import the required template (Slurm/ OpenPBS or Gridenigne).
 
 `cyclecloud import_template -f templates/slurm_with_ad.txt`
