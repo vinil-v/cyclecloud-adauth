@@ -1,8 +1,8 @@
 # cyclecloud-adauth
-## Project for integrating Activite directory for Scheduler in CycleCloud
+Project for integrating Activite directory into CycleCloud HPC.
 
-#Requirement:
+**Requirement:**
 
-CycleCloud.
-Active Directory.
+CycleCloud
+Active Directory
 
