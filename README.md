@@ -11,3 +11,6 @@ It is recommended that user access be managed through a directory service such a
 
 **Configuring the Project**
 
+**Configuring AD in CycleCloud**
+[AD](https://github.com/vinil-v/cyclecloud-adauth/blob/main/images/ad-screenshot.png?raw=true)
+
