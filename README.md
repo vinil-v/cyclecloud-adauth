@@ -10,6 +10,15 @@ It is recommended that user access be managed through a directory service such a
 3. Supported OS version : CentOS 7 / RHEL7 / Alma Linux 8 / Ubuntu 18.04
 
 **Configuring the Project**
+1. Open a terminal session in CycleCloud server with the CycleCloud CLI enabled.
+2. clone the cyclecloud-adauth repo
+`git clone https://github.com/vinil-v/cyclecloud-adauth.git`
+
+3. Upload the project to cyclecloud locker.
+`cd cyclecloud-adauth/`
+`cyclecloud project upload <locker name>`
+4. Import the required template (Slurm/ OpenPBS or Gridenigne).
+`cyclecloud import_template -f templates/slurm_with_ad.txt`
 
 **Configuring AD in CycleCloud**
 ![Alt text](https://github.com/vinil-v/cyclecloud-adauth/blob/main/images/ad-screenshot.png?raw=true)
