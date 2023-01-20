@@ -47,3 +47,17 @@ Create new cluster from the imported template(Slurm with AD in this case) and in
 Start the cluster. Make sure that the Active directory is running and reachable to all the nodes.
 
 ## Testing the user login ##
+
+
+``` bash
+$ ssh user1@10.222.1.45
+user1@10.222.1.45's password:
+Creating home directory for user1.
+[user1@centosad-scheduler ~]$ pwd
+/shared/home/user1
+[user1@centosad-scheduler ~]$ sinfo
+PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+hpc*         up   infinite     50  idle~ centosad-hpc-pg0-[1-50]
+htc          up   infinite     50  idle~ centosad-htc-[1-50]
+[user1@centosad-scheduler ~]$
+```
