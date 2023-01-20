@@ -4,10 +4,10 @@ This Project installs and configures Active directory based user authentication 
 It is recommended that user access be managed through a directory service such as LDAP, Active Directory, or NIS for enterprise production clusters. 
 
 **Table of contents**
-    - [Pre-Requisites](#pre-requisites)
-    - [Configuring the Project](#configuring-the-project)
-    - [Configuring AD Login in CycleCloud Portal](#configuring-ad-login-in-cyclecloud-portal)
-    - [Testing the user login](#testing-the-user-login)
+- [Pre-Requisites](#pre-requisites)
+- [Configuring the Project](#configuring-the-project)
+- [Configuring AD Login in CycleCloud Portal](#configuring-ad-login-in-cyclecloud-portal)
+- [Testing the user login](#testing-the-user-login)
 
 ## Pre-Requisites ##
 1. [CycleCloud](https://learn.microsoft.com/en-us/azure/cyclecloud/qs-install-marketplace?view=cyclecloud-8) must be installed and running (CycleCloud 8.0 or later).
