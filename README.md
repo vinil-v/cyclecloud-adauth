@@ -47,9 +47,12 @@ Create new cluster from the imported template(Slurm with AD in this case) and in
 Start the cluster. Make sure that the Active directory is running and reachable to all the nodes.
 
 ## Testing the user login ##
-Trying to login with `user1`, `user1` is an AD user.
+Trying to login with AD user `user1`.
+
 <img src="https://raw.githubusercontent.com/vinil-v/cyclecloud-adauth/main/images/ad-user-login.png" width="306" height="403">
+
 login to scheduler with AD user `user1` with AD user password. it will create home directory under /shared/home.
+
 ``` bash
 $ ssh user1@10.222.1.45
 user1@10.222.1.45's password:
