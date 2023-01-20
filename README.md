@@ -69,4 +69,5 @@ htc          up   infinite     50  idle~ centosad-htc-[1-50]
 [user1@centosad-scheduler ~]$
 ```
 NOTE: Check the UID or GID support for the job submission. some scheduler has configuration to support UID/GID range.
+
 All the best !
