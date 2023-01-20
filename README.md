@@ -42,20 +42,23 @@ The following parameters required for successful configuration.
 
 Create new cluster from the imported template(Slurm with AD in this case) and in the Active Directory section, add the above mentioned parameter. 
 
-![ad_slurm](https://raw.githubusercontent.com/vinil-v/cyclecloud-adauth/main/images/ad-screenshot.png)
+![](https://raw.githubusercontent.com/vinil-v/cyclecloud-adauth/main/images/ad-screenshot.png =518x236)
 
 Start the cluster. Make sure that the Active directory is running and reachable to all the nodes.
 
 ## Testing the user login ##
+Trying to login with `user1`, `user1` is an AD user.
+![](https://raw.githubusercontent.com/vinil-v/cyclecloud-adauth/main/images/ad-user-login.png =306x403)
 
-![Ad user](https://raw.githubusercontent.com/vinil-v/cyclecloud-adauth/main/images/ad-user-login.png)
-
+login to scheduler with AD user `user1` with AD user password. it will create home directory under /shared/home.
 ``` bash
 $ ssh user1@10.222.1.45
 user1@10.222.1.45's password:
 Creating home directory for user1.
 [user1@centosad-scheduler ~]$ pwd
 /shared/home/user1
+[user1@centosad-scheduler ~]$ id
+uid=1543001103(user1) gid=1543000513(domain users) groups=1543000513(domain users) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
 [user1@centosad-scheduler ~]$ sinfo
 PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
 hpc*         up   infinite     50  idle~ centosad-hpc-pg0-[1-50]
