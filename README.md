@@ -42,12 +42,13 @@ The following parameters required for successful configuration.
 
 Create new cluster from the imported template(Slurm with AD in this case) and in the Active Directory section, add the above mentioned parameter. 
 
-![Alt text](https://github.com/vinil-v/cyclecloud-adauth/blob/main/images/ad-screenshot.png?raw=true)
+![ad_slurm](https://raw.githubusercontent.com/vinil-v/cyclecloud-adauth/main/images/ad-screenshot.png)
 
 Start the cluster. Make sure that the Active directory is running and reachable to all the nodes.
 
 ## Testing the user login ##
 
+![Ad user](https://raw.githubusercontent.com/vinil-v/cyclecloud-adauth/main/images/ad-user-login.png)
 
 ``` bash
 $ ssh user1@10.222.1.45
