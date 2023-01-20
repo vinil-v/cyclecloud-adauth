@@ -42,14 +42,13 @@ The following parameters required for successful configuration.
 
 Create new cluster from the imported template(Slurm with AD in this case) and in the Active Directory section, add the above mentioned parameter. 
 
-![](https://raw.githubusercontent.com/vinil-v/cyclecloud-adauth/main/images/ad-screenshot.png =518x236)
+<img src="https://raw.githubusercontent.com/vinil-v/cyclecloud-adauth/main/images/ad-screenshot.png" width="518" height="236">
 
 Start the cluster. Make sure that the Active directory is running and reachable to all the nodes.
 
 ## Testing the user login ##
 Trying to login with `user1`, `user1` is an AD user.
-![](https://raw.githubusercontent.com/vinil-v/cyclecloud-adauth/main/images/ad-user-login.png =306x403)
-
+<img src="https://raw.githubusercontent.com/vinil-v/cyclecloud-adauth/main/images/ad-user-login.png" width="306" height="403">
 login to scheduler with AD user `user1` with AD user password. it will create home directory under /shared/home.
 ``` bash
 $ ssh user1@10.222.1.45
