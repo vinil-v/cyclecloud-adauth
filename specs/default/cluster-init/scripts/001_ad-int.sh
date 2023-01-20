@@ -11,7 +11,7 @@ ADMIN_NAME=$(jetpack config adauth.ad_admin_user)
 ADMIN_PASSWORD=$(jetpack config adauth.ad_admin_password)
 
 #removing AD server IP incase used in standalone DNS
-sed -i '/$AD_SERVER_IP/d' /etc/hosts
+sed -i "/$AD_SERVER_IP/d" /etc/hosts
 
 #Update the nameserver and host file - for resolving AD server and AD has its own DNS
 echo "nameserver ${AD_SERVER}" >> /etc/resolv.conf
