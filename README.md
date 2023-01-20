@@ -35,6 +35,7 @@ cyclecloud import_template -f templates/slurm_with_ad.txt
 ## Configuring AD Login in CycleCloud Portal ##
 
 The following parameters required for successful configuration.
+
     1. FQDN of AD server ( eg: adserver.hpc.local)
     2. IP address of AD server
     3. Administrator account ( User account should have rights to add the nodes to domain)
@@ -67,3 +68,4 @@ hpc*         up   infinite     50  idle~ centosad-hpc-pg0-[1-50]
 htc          up   infinite     50  idle~ centosad-htc-[1-50]
 [user1@centosad-scheduler ~]$
 ```
+All the best !
