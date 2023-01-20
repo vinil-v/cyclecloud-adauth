@@ -4,9 +4,10 @@ This Project installs and configures Active directory based user authentication 
 It is recommended that user access be managed through a directory service such as LDAP, Active Directory, or NIS for enterprise production clusters. 
 
 **Table of contents**
-1. [Pre-Requisites](#pre-requisites)
-2. [Configuring the Project](#configuring-the-project)
-3. [Configuring AD Login in CycleCloud Portal](#configuring-ad-login-in-cyclecloud-portal)
+    - [Pre-Requisites](#pre-requisites)
+    - [Configuring the Project](#configuring-the-project)
+    - [Configuring AD Login in CycleCloud Portal](#configuring-ad-login-in-cyclecloud-portal)
+    - [Testing the user login](#testing-the-user-login)
 
 ## Pre-Requisites ##
 1. [CycleCloud](https://learn.microsoft.com/en-us/azure/cyclecloud/qs-install-marketplace?view=cyclecloud-8) must be installed and running (CycleCloud 8.0 or later).
@@ -33,7 +34,16 @@ cyclecloud import_template -f templates/slurm_with_ad.txt
 
 ## Configuring AD Login in CycleCloud Portal ##
 
-The following parameter
+The following parameters required for successful configuration.
+    1. FQDN of AD server ( eg: adserver.hpc.local)
+    2. IP address of AD server
+    3. Administrator account ( User account should have rights to add the nodes to domain)
+    4. Administrator password
+
+Create new cluster from the imported template(Slurm with AD in this case) and in the Active Directory section, add the above mentioned parameter. 
 
 ![Alt text](https://github.com/vinil-v/cyclecloud-adauth/blob/main/images/ad-screenshot.png?raw=true)
 
+Start the cluster. Make sure that the Active directory is running and reachable to all the nodes.
+
+## Testing the user login ##
