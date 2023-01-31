@@ -1,5 +1,6 @@
 #!/bin/sh
 #automating SSH key creation and passwordless configuration
+# SSH Key get created after the AD user login
 cat <<EOF >/etc/profile.d/gen_sshkey.sh
 #!/bin/sh
 if [ ! -f  ~/.ssh/id_rsa.pub ] ; then
