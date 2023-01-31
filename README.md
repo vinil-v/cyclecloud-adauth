@@ -59,6 +59,7 @@ Trying to login with AD user `user1`.
 login to scheduler with AD user `user1` with AD user password. it will create home directory under /shared/home.
 
 ``` bash
+
 $ ssh user1@10.222.1.45
 user1@10.222.1.45's password:
 Creating home directory for user1.
@@ -66,11 +67,15 @@ Creating home directory for user1.
 /shared/home/user1
 [user1@centosad-scheduler ~]$ id
 uid=1543001103(user1) gid=1543000513(domain users) groups=1543000513(domain users) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+[user1@centosad-scheduler ~]$ ls -l .ssh
+total 12
+-rw-r--r--. 1 user1 domain users  571 Jan 31 05:55 authorized_keys
+-rw-------. 1 user1 domain users 2602 Jan 31 05:55 id_rsa
+-rw-r--r--. 1 user1 domain users  571 Jan 31 05:55 id_rsa.pub
 [user1@centosad-scheduler ~]$ sinfo
 PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
 hpc*         up   infinite     50  idle~ centosad-hpc-pg0-[1-50]
 htc          up   infinite     50  idle~ centosad-htc-[1-50]
-[user1@centosad-scheduler ~]$
 ```
 NOTE: Check the UID or GID support for the job submission. some scheduler has configuration to support UID/GID range.
 
