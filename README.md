@@ -3,6 +3,8 @@ This Project installs and configures Active directory based user authentication 
 
 It is recommended that user access be managed through a directory service such as LDAP, Active Directory, or NIS for enterprise production clusters. 
 
+This project will configure the home directory and passwordless ssh configuration for AD users, right after they login. It removes the computer account from Active Directory after the node is removed or terminated.
+
 **Table of contents**
 - [Pre-Requisites](#pre-requisites)
 - [Configuring the Project](#configuring-the-project)
@@ -13,8 +15,8 @@ It is recommended that user access be managed through a directory service such a
 1. [CycleCloud](https://learn.microsoft.com/en-us/azure/cyclecloud/qs-install-marketplace?view=cyclecloud-8) must be installed and running (CycleCloud 8.0 or later).
 2. [Windows Active Directory](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-) must be configured and running. 
 3. Active Directory should be reachable to all the nodes in the cluster and required ports should be opened for authentication. 
-4. Supported OS version : CentOS 7 / RHEL7 / Alma Linux 8 / Ubuntu 18.04
-5. Default user home directory for CycleCloud HPC nodes in /shared/home. 
+4. Supported OS versions : CentOS 7 / RHEL7 / Alma Linux 8 / Ubuntu 18.04
+5. Default user home directory for CycleCloud HPC nodes in `/shared/home`. This project configure home dirs in the cyclecloud default user home location.
 6. SELinux in Permissive mode
 
 ## Configuring the Project ##
