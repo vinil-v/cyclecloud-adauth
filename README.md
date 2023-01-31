@@ -3,7 +3,7 @@ This Project installs and configures Active directory based user authentication 
 
 It is recommended that user access be managed through a directory service such as LDAP, Active Directory, or NIS for enterprise production clusters. 
 
-This project will configure the home directory and passwordless ssh configuration for AD users, right after they login. It removes the computer account from Active Directory after the node is removed or terminated.
+This project will configure the home directory and passwordless ssh configuration for AD users, right after they login. 
 
 **Table of contents**
 - [Pre-Requisites](#pre-requisites)
