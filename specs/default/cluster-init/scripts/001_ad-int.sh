@@ -28,6 +28,13 @@ StrictHostKeyChecking no
 UserKnownHostsFile /dev/null
 EOF
 
+#checking for AD availability
+nmap -p 389 $AD_SERVER_IP | grep open
+if [ $? -ne 0 ]; then
+    echo "AD is not reachable - please check your network settings"
+    exit 1
+fi
+
 #AD integration starts from here.
 delay=15
 n=1
