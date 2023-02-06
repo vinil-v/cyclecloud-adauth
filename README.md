@@ -1,5 +1,5 @@
 # cyclecloud-adauth
-This Project installs and configures Active directory based user authentication for CycleCloud based HPC Cluster.
+This Project installs and configures Active directory based user authentication for CycleCloud based HPC Clusters.
 
 It is recommended that user access be managed through a directory service such as LDAP, Active Directory, or NIS for enterprise production clusters. 
 
