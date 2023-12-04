@@ -54,7 +54,7 @@ Start the cluster. Make sure that the Active directory is running and reachable 
 ## Testing the user login ##
 Trying to login with AD user `user1`.
 
-<img src="https://raw.githubusercontent.com/vinil-v/cyclecloud-adauth/main/images/ad-user-login.png" width="306" height="403">
+<img src="https://raw.githubusercontent.com/vinil-v/cyclecloud-adauth/main/images/ad-user-login.png" width="800" height="403">
 
 login to scheduler with AD user `user1` with AD user password. it will create home directory under /shared/home.
 
