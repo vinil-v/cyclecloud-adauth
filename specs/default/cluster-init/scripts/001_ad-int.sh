@@ -16,10 +16,7 @@ sed -i "/$AD_SERVER_IP/d" /etc/hosts
 #Update the nameserver and host file - for resolving AD server and AD has its own DNS
 echo "nameserver ${AD_SERVER}" >> /etc/resolv.conf
 echo "${AD_SERVER_IP} ${AD_SERVER}" >> /etc/hosts
-
 update-crypto-policies --set DEFAULT:AD-SUPPORT
-setenforce 0
-sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 
 #SSH configuration - enabling Password based authentication for login with password
 #if you are using key based auth then no changed need. however in this scenario, home dir are created after the user login.

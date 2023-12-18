@@ -11,6 +11,8 @@ case $OS_VER in
 rhel)
     yum clean all
     yum install sssd realmd oddjob oddjob-mkhomedir adcli samba-common samba-common-tools krb5-workstation openldap-clients policycoreutils-python-utils nmap -y
+    setenforce 0
+    sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
     ;;
 debian)
     export DEBIAN_FRONTEND=noninteractive
