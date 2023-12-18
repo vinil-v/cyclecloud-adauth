@@ -17,7 +17,7 @@ sed -i "/$AD_SERVER_IP/d" /etc/hosts
 echo "nameserver ${AD_SERVER}" >> /etc/resolv.conf
 echo "${AD_SERVER_IP} ${AD_SERVER}" >> /etc/hosts
 
-
+update-crypto-policies --set DEFAULT:AD-SUPPORT
 #SSH configuration - enabling Password based authentication for login with password
 #if you are using key based auth then no changed need. however in this scenario, home dir are created after the user login.
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
